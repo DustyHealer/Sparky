@@ -8,34 +8,35 @@ namespace Sparky
 {
     public class BankAccount
     {
-        public int balance { get; set; }
+        public int Balance { get; set; }
         private readonly ILogBook _logBook;
         public BankAccount(ILogBook logBook)
         {
             _logBook = logBook;
-            balance = 0;
+            Balance = 0;
         }
 
         public bool Deposit(int amount)
         {
             _logBook.Message("Deposit invoked");
-            balance += amount;
+            Balance += amount;
             return true;
         }
 
         public bool Withdraw(int amount)
         {
-            if (amount <= balance)
+            if (amount <= Balance)
             {
-                balance -= amount;
-                return true;
+                _logBook.LogToDb("Withdrawal Amount: " + amount.ToString());
+                Balance -= amount;
+                return _logBook.LogBalanceAfterWithdrawal(Balance);
             }
-            return false;
+            return _logBook.LogBalanceAfterWithdrawal(Balance-amount);
         }
 
         public int GetBalance()
         {
-            return balance;
+            return Balance;
         }
     }
 }
