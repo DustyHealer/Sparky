@@ -86,10 +86,43 @@ namespace Sparky
         [Test]
         public void GreetChecker_EmptyFirstName_ThrowsException()
         {
+            // When we want to check the exception message
             var exceptionDetails = Assert.Throws<ArgumentException>(() => customer.GreetAndCombineNames("", "Spark"));
             ClassicAssert.AreEqual("Empty First Name", exceptionDetails.Message);
 
             Assert.That(() => customer.GreetAndCombineNames("", "Spark"), Throws.ArgumentException.With.Message.Contains("Empty First Name")); // Call the method and assert in a single line using Assert.That
+
+            // When we only want to check that an exception is thrown
+            Assert.Throws<ArgumentException>(() => customer.GreetAndCombineNames("", "Spark"));
+            ClassicAssert.AreEqual("Empty First Name", exceptionDetails.Message);
+
+            Assert.That(() => customer.GreetAndCombineNames("", "Spark"), Throws.ArgumentException); // Call the method and assert in a single line using Assert.That
+        }
+
+        [Test]
+        public void CustomerType_CreateCustomerWithLessThan100Order_ReturnBasicCustomer()
+        {
+            // Arrange
+            customer.OrderTotal = 10;
+
+            // Act
+            var result = customer.GetCustomerDetails();
+
+            // Assert
+            Assert.That(result, Is.TypeOf<BasicCustomer>()); // To check the type of the object
+        }
+
+        [Test]
+        public void CustomerType_CreateCustomerWithMoreThan100Order_ReturnPlatinumCustomer()
+        {
+            // Arrange
+            customer.OrderTotal = 110;
+
+            // Act
+            var result = customer.GetCustomerDetails();
+
+            // Assert
+            Assert.That(result, Is.TypeOf<PlatinumCustomer>()); // To check the type of the object
         }
     }
 }
