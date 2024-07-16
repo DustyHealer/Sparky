@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparkyNUnitTest", "SparkyNU
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkyXUnit", "SparkyXUnit\SparkyXUnit.csproj", "{6E099BCB-68DC-4D67-940C-D67F587092CA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basic Foundation", "Basic Foundation", "{0160A0F3-457C-4404-A905-B674396B4CB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{125C389C-E73F-4F31-A1C1-3A562B14310E} = {0160A0F3-457C-4404-A905-B674396B4CB8}
+		{C36F73E6-7053-455B-8F20-1D7B2D573AF6} = {0160A0F3-457C-4404-A905-B674396B4CB8}
+		{9A6A1FF5-9CEC-4564-8DC5-9DBC06A8E43E} = {0160A0F3-457C-4404-A905-B674396B4CB8}
+		{6E099BCB-68DC-4D67-940C-D67F587092CA} = {0160A0F3-457C-4404-A905-B674396B4CB8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC837111-B698-4EBF-BC21-00618EF64F62}
