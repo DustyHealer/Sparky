@@ -93,7 +93,7 @@ namespace Sparky
             // Arrange
             // Do this in setup method
             Calculator calc = new();
-            List<int> expectedOddRange = new() { 5, 7, 9 }; //5-10
+            List<int> expectedOddRange = [5, 7, 9]; //5-10
 
             // Act
             List<int> result = calc.GetOddRange(5, 10);

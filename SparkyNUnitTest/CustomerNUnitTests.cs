@@ -12,7 +12,7 @@ namespace Sparky
     [TestFixture]
     public class CustomerNUnitTests
     {
-        private Customer? customer;
+        private Customer customer;
 
         [SetUp]
         public void Setup()

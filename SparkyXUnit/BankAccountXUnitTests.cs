@@ -16,7 +16,7 @@ namespace Sparky
             var logMock = new Mock<ILogBook>();
             logMock.Setup(x => x.Message(""));
 
-            BankAccount bankAccount = new BankAccount(logMock.Object);
+            BankAccount bankAccount = new(logMock.Object);
             var result = bankAccount.Deposit(100);
             Assert.True(result);
             Assert.Equal(100, bankAccount.GetBalance());
@@ -33,7 +33,7 @@ namespace Sparky
             // Condition given in the moq that input should be greater than 0
             logMock.Setup(x => x.LogBalanceAfterWithdrawal(It.Is<int>(x => x > 0))).Returns(true);
 
-            BankAccount bankAccount = new BankAccount(logMock.Object);
+            BankAccount bankAccount = new (logMock.Object);
             bankAccount.Deposit(balance);
 
             var result = bankAccount.Withdraw(withdraw);
@@ -58,7 +58,7 @@ namespace Sparky
             // We can give a range also in the moq condition
             logMock.Setup(x => x.LogBalanceAfterWithdrawal(It.IsInRange<int>(int.MinValue, -1, Moq.Range.Inclusive))).Returns(false);
 
-            BankAccount bankAccount = new BankAccount(logMock.Object);
+            BankAccount bankAccount = new(logMock.Object);
             bankAccount.Deposit(balance);
 
             var result = bankAccount.Withdraw(withdraw);
@@ -88,8 +88,7 @@ namespace Sparky
             logMock.Setup(x => x.LogToDb(It.IsAny<string>())).Returns(true);
 
             logMock.Setup(x => x.LogWithOutputResult(It.IsAny<string>(), out desiredOutput)).Returns(true);
-            string result = "";
-            Assert.True(logMock.Object.LogWithOutputResult("Ben", out result));
+            Assert.True(logMock.Object.LogWithOutputResult("Ben", out string result));
             Assert.Equal(desiredOutput, result);
         }
 
