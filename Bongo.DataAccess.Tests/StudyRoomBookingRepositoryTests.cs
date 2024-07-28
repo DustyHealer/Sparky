@@ -47,7 +47,8 @@ namespace Bulky.DataAccess
         public void SetUp() 
         {
             // Create an in-memory database
-            options = new DbContextOptionsBuilder<ApplicationDbContext>().UseInMemoryDatabase(databaseName: "temp_Bongo").Options;
+            options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseInMemoryDatabase(databaseName: "temp_Bongo").Options;
         }
 
         [Test]
@@ -109,7 +110,7 @@ namespace Bulky.DataAccess
             {
                 var booking1 = (StudyRoomBooking)x;
                 var booking2 = (StudyRoomBooking)y;
-                if (booking1?.BookingId > booking2?.BookingId) 
+                if (booking1?.BookingId != booking2?.BookingId) 
                 {
                     return 1;
                 }

@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparkyMSTest", "SparkyMSTes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparkyNUnitTest", "SparkyNUnitTest\SparkyNUnitTest.csproj", "{9A6A1FF5-9CEC-4564-8DC5-9DBC06A8E43E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkyXUnit", "SparkyXUnit\SparkyXUnit.csproj", "{6E099BCB-68DC-4D67-940C-D67F587092CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparkyXUnit", "SparkyXUnit\SparkyXUnit.csproj", "{6E099BCB-68DC-4D67-940C-D67F587092CA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basic Foundation", "Basic Foundation", "{0160A0F3-457C-4404-A905-B674396B4CB8}"
 EndProject
@@ -23,9 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bongo.Models", "Bongo_Initi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bongo.Web", "Bongo_InitialSetup (.NET 6)\Bongo.Web\Bongo.Web.csproj", "{B0CD5BDF-81B6-4C58-81F0-8230F4FAAFAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bongo.Models.Tests", "Bongo.Models.Tests\Bongo.Models.Tests.csproj", "{186F9446-040B-4B34-885D-E82113B347D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bongo.Models.Tests", "Bongo.Models.Tests\Bongo.Models.Tests.csproj", "{186F9446-040B-4B34-885D-E82113B347D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bongo.DataAccess.Tests", "Bongo.DataAccess.Tests\Bongo.DataAccess.Tests.csproj", "{F8F5A599-06D7-42D5-910F-5F44AD77A80D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bongo.DataAccess.Tests", "Bongo.DataAccess.Tests\Bongo.DataAccess.Tests.csproj", "{F8F5A599-06D7-42D5-910F-5F44AD77A80D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bongo.Core.Tests", "Bongo.Core.Tests\Bongo.Core.Tests.csproj", "{272BEC64-3E04-4B96-AC39-807A63CC3470}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bongo.Web.Tests", "Bongo.Web.Tests\Bongo.Web.Tests.csproj", "{38F13ABC-D784-4E99-88F2-79071B5EE141}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +77,14 @@ Global
 		{F8F5A599-06D7-42D5-910F-5F44AD77A80D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8F5A599-06D7-42D5-910F-5F44AD77A80D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8F5A599-06D7-42D5-910F-5F44AD77A80D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{272BEC64-3E04-4B96-AC39-807A63CC3470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{272BEC64-3E04-4B96-AC39-807A63CC3470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{272BEC64-3E04-4B96-AC39-807A63CC3470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{272BEC64-3E04-4B96-AC39-807A63CC3470}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38F13ABC-D784-4E99-88F2-79071B5EE141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38F13ABC-D784-4E99-88F2-79071B5EE141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38F13ABC-D784-4E99-88F2-79071B5EE141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38F13ABC-D784-4E99-88F2-79071B5EE141}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +100,8 @@ Global
 		{B0CD5BDF-81B6-4C58-81F0-8230F4FAAFAD} = {41A03323-0786-4736-AE67-4382FBB504C9}
 		{186F9446-040B-4B34-885D-E82113B347D5} = {41A03323-0786-4736-AE67-4382FBB504C9}
 		{F8F5A599-06D7-42D5-910F-5F44AD77A80D} = {41A03323-0786-4736-AE67-4382FBB504C9}
+		{272BEC64-3E04-4B96-AC39-807A63CC3470} = {41A03323-0786-4736-AE67-4382FBB504C9}
+		{38F13ABC-D784-4E99-88F2-79071B5EE141} = {41A03323-0786-4736-AE67-4382FBB504C9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC837111-B698-4EBF-BC21-00618EF64F62}
